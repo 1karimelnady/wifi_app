@@ -1,25 +1,9 @@
 import 'dart:io';
 import 'package:http/http.dart' as http;
 import '../models/device_info.dart';
-
-import 'dart:io';
-import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart'; // أضف الحزمة دي
-
-import 'dart:io';
-import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart'; // أضفنا الحزمة دي
-
-import 'dart:io';
-import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart'; // أضفنا الحزمة دي
-
-import 'package:http/http.dart' as http;
-import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 
 class NetworkService {
-  /// Sends device information to the admin phone.
   Future<void> sendDeviceInfo(String adminIp, DeviceInfo deviceInfo) async {
     final url = Uri.parse('http://$adminIp/sendDeviceInfo');
     try {
@@ -39,7 +23,6 @@ class NetworkService {
     }
   }
 
-  /// Downloads the APK and updates the progress.
   Future<String> downloadApk(
     String adminIp,
     String processorType,
